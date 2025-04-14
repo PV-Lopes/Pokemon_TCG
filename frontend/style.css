@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ef5350;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 5px;
+}
