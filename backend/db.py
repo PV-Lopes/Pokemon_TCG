@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Conectando ao MongoDB Atlas
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+MONGO_URI = "mongodb+srv://adm:pokemon123@projeto-pokemon.e3unygr.mongodb.net/?retryWrites=true&w=majority&appName=Projeto-pokemon"
 client = MongoClient(MONGO_URI)
 db = client['pokemon_game']
 
