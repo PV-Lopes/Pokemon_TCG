@@ -16,27 +16,77 @@ main {
   padding: 20px;
 }
 
+/* Ajustar os títulos */
 h2 {
   color: #333;
 }
 
+/* Container de Cartas */
 .card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center; /* Alinha as cartas ao centro */
 }
 
+/* Itens de carta */
 .card-item {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 120px;
+  width: 150px; /* Aumenta a largura para melhor visualização */
   padding: 10px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nas cartas */
+.card-item:hover {
+  transform: scale(1.05);
 }
 
 .card-item img {
   width: 100px;
   height: auto;
   margin-bottom: 5px;
+}
+
+/* Lista de Jogadores e Batalhas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .card-item {
+    width: 120px; /* Ajusta o tamanho das cartas para telas menores */
+  }
+
+  ul {
+    padding-left: 20px; /* Adiciona margem para listas de jogadores e batalhas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Diminui o tamanho da fonte do título para telas muito pequenas */
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .card-item {
+    width: 100px; /* Ajusta ainda mais o tamanho das cartas em dispositivos muito pequenos */
+  }
+
+  ul li {
+    font-size: 14px; /* Reduz o tamanho da fonte dos itens da lista */
+  }
 }

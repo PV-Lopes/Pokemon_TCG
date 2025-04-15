@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db import cards as cards_col, players as players_col, battles as battles_col, add_player, add_card, add_battle  # Importando funções e coleções
+from db import cards_col, players_col, battles_col, add_player, add_card, add_battle
 from bson import json_util
 from datetime import datetime
 
@@ -60,7 +60,6 @@ def vitorias_por_carta():
 # Rota para inserir jogador de teste
 @app.route("/api/teste_insercao_player")
 def teste_insercao_player():
-    # Inserir um jogador de teste
     add_player({
         "nome": "Ash Ketchum",
         "deck": ["Pikachu", "Charizard"],
@@ -71,9 +70,8 @@ def teste_insercao_player():
 # Rota para inserir card de teste
 @app.route("/api/teste_insercao_card")
 def teste_insercao_card():
-    # Inserir um card de teste
     add_card({
-        "id": "pikachu_001",  # ID único do card
+        "id": "pikachu_001",
         "nome": "Pikachu",
         "tipo": "Elétrico",
         "ataque": 50,
@@ -84,14 +82,13 @@ def teste_insercao_card():
 # Rota para inserir batalha de teste
 @app.route("/api/teste_insercao_batalha")
 def teste_insercao_batalha():
-    # Inserir uma batalha de teste
     add_battle({
         "player1": "Ash Ketchum",
         "player2": "Gary Oak",
         "deck1": ["Pikachu", "Charizard"],
         "deck2": ["Blastoise", "Arcanine"],
         "winner": "Ash Ketchum",
-        "timestamp": datetime.now()  # Adiciona o timestamp da batalha
+        "timestamp": datetime.now()
     })
     return {"status": "Batalha inserida com sucesso!"}
 
@@ -108,7 +105,9 @@ def home():
         <li><a href='/api/teste_insercao_player'>Inserir jogador de teste</a></li>
         <li><a href='/api/teste_insercao_card'>Inserir card de teste</a></li>
         <li><a href='/api/teste_insercao_batalha'>Inserir batalha de teste</a></li>
-        <li>/api/consultas/vitorias_por_carta?carta=NomeDaCarta&inicio=2024-01-01&fim=2024-12-31</li>
+        <li><a href='/api/consultas/vitorias_por_carta?carta=NomeDaCarta&inicio=2024-01-01&fim=2024-12-31'>
+            /api/consultas/vitorias_por_carta
+        </a></li>
     </ul>
     """
 

@@ -1,7 +1,7 @@
 const API_BASE = "http://localhost:5000"; // ajuste se necessário
 
 // Carregar cartas
-fetch(`${API_BASE}/cards`)
+fetch(`${API_BASE}/api/cartas`)
   .then(res => res.json())
   .then(cards => {
     const container = document.getElementById("cardList");
@@ -18,7 +18,7 @@ fetch(`${API_BASE}/cards`)
   });
 
 // Carregar jogadores
-fetch(`${API_BASE}/players`)
+fetch(`${API_BASE}/api/jogadores`)
   .then(res => res.json())
   .then(players => {
     const ul = document.getElementById("playerList");
@@ -30,7 +30,7 @@ fetch(`${API_BASE}/players`)
   });
 
 // Carregar batalhas
-fetch(`${API_BASE}/battles`)
+fetch(`${API_BASE}/api/batalhas`)
   .then(res => res.json())
   .then(battles => {
     const ul = document.getElementById("battleList");

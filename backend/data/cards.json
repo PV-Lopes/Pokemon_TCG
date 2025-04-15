@@ -1,0 +1,13 @@
+[
+    {
+        "id": "dp3-1",
+        "name": "Ampharos",
+        "image": "https://images.pokemontcg.io/dp3/1.png",
+        "hp": 130,
+        "types": [
+            "Lightning"
+        ],
+        "attacks": [
+            "Cluster Bolt"
+        ],
+        "_id": 
